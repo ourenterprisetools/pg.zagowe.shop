@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>References</title>
+    <style>
+      :root {
+        --ink: #111827;
+        --muted: #374151;
+        --accent: #0a7bc4;
+        --panel: #fff;
+        --bg: #f6f7fb;
+        --max: 860px;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        line-height: 1.75;
+      }
+      a {
+        color: var(--accent);
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: clamp(16px, 4vw, 28px);
+      }
+      .card {
+        background: var(--panel);
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        padding: clamp(18px, 3.5vw, 28px);
+      }
+      h1 {
+        font-size: clamp(26px, 5vw, 36px);
+        margin: 0.2em 0 0.6em;
+      }
+      ol {
+        padding-left: 1.2em;
+      }
+      li {
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>References</h1>
+        <p>
+          List here the sources that substantiate claims made on your pages.
+          Prefer peer-reviewed journals, authoritative organizations, and
+          official statistics. Use consistent citation format.
+        </p>
+        <ol>
+          <li>Author(s). <em>Title</em>. Journal/Publisher; Year. DOI/URL.</li>
+          <li>Author(s). <em>Title</em>. Journal/Publisher; Year. DOI/URL.</li>
+          <li>Organization. <em>Report Title</em>. Year. URL.</li>
+          <li>Author(s). <em>Title</em>. Journal/Publisher; Year. DOI/URL.</li>
+          <li>Author(s). <em>Title</em>. Journal/Publisher; Year. DOI/URL.</li>
+        </ol>
+        <p><a href="/">← Back to Home</a></p>
+      </div>
+    </div>
+  </body>
+</html>

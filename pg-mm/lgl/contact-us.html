@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact Us</title>
+    <style>
+      :root {
+        --ink: #111827;
+        --muted: #374151;
+        --accent: #0a7bc4;
+        --panel: #fff;
+        --bg: #f6f7fb;
+        --max: 860px;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        line-height: 1.7;
+      }
+      a {
+        color: var(--accent);
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: clamp(16px, 4vw, 28px);
+      }
+      .card {
+        background: var(--panel);
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        padding: clamp(18px, 3.5vw, 28px);
+      }
+      h1 {
+        font-size: clamp(26px, 5vw, 36px);
+        margin: 0.2em 0 0.4em;
+      }
+      h2 {
+        font-size: clamp(18px, 3.2vw, 22px);
+        margin: 1.2em 0 0.4em;
+      }
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: 1fr 1fr;
+      }
+      label {
+        font-weight: 700;
+        color: var(--muted);
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 2px solid #d1d5db;
+        border-radius: 10px;
+        font-size: 16px;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(10, 123, 196, 0.15);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #0a7bc4;
+        color: #fff;
+        border: 0;
+        border-radius: 12px;
+        padding: 14px 18px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .item {
+        padding: 14px;
+        border-left: 4px solid #0a7bc4;
+        background: #f8fafc;
+        border-radius: 10px;
+      }
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>Contact Us</h1>
+        <p class="item">
+          <strong>Email:</strong>
+          <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+        </p>
+        <p class="item">
+          <strong>Address:</strong> 678 Genius Plaza, Peak Performance City, CA
+          90215, USA
+        </p>
+        <p class="item">
+          <strong>Support Hours:</strong> Mon–Fri 9:00–18:00 PST · Sat
+          10:00–16:00 PST
+        </p>
+
+        <h2>Send a Message</h2>
+        <form
+          action="#"
+          method="post"
+          class="grid"
+          onsubmit="alert('Message sent. We reply within 24–48h.');this.reset();return false;"
+        >
+          <div>
+            <label for="name">Full Name *</label>
+            <input id="name" name="name" required autocomplete="name" />
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div>
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select</option>
+              <option>Product / Method Questions</option>
+              <option>Technical Support</option>
+              <option>Billing</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div>
+            <label for="order">Order # (if any)</label>
+            <input id="order" name="order" inputmode="numeric" />
+          </div>
+          <div style="grid-column: 1/-1">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              placeholder="How can we help?"
+            ></textarea>
+          </div>
+          <div style="grid-column: 1/-1">
+            <button class="btn" type="submit">Send</button>
+          </div>
+        </form>
+
+        <p style="margin-top: 14px"><a href="/">← Back to Home</a></p>
+      </div>
+    </div>
+  </body>
+</html>
